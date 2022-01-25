@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".presentation.home.HomeFragment">
+
+    <SearchView
+        android:id="@+id/locationSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:iconifiedByDefault="false"
+        android:queryHint="Enter your location"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:elevation="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/listLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/locationSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/businessesList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/purple_200"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/emptyView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:contentDescription="@string/content_description_empty"-->
+    <!--        android:paddingBottom="160dp"-->
+    <!--        android:scaleType="center"-->
+    <!--        android:src="@mipmap/producthunt"-->
+    <!--        android:visibility="gone" />-->
+
+</RelativeLayout>
